@@ -1,0 +1,275 @@
+
+.final-cta-section {
+  width: 100%;
+  padding: 110px 5%;
+  background: #f1f6ff;
+  box-sizing: border-box;
+}
+
+.final-cta-container {
+  max-width: 1400px;
+  min-height: 620px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.final-cta-content {
+  max-width: 680px;
+}
+
+.final-cta-label {
+  display: inline-block;
+  margin-bottom: 22px;
+
+  color: #064bc4;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.final-cta-content h2 {
+  margin: 0;
+
+  color: #10131b;
+  font-size: clamp(52px, 6vw, 86px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  font-weight: 700;
+}
+
+.final-cta-content h2 span {
+  color: #064bc4;
+}
+
+.final-cta-content p {
+  max-width: 610px;
+  margin: 32px 0 0;
+
+  color: #626872;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.final-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.final-cta-primary,
+.final-cta-secondary {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 54px;
+  padding: 0 25px;
+
+  border-radius: 50px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.final-cta-primary {
+  gap: 15px;
+  background: #064bc4;
+  color: #ffffff;
+}
+
+.final-cta-primary span {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.final-cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(6, 75, 196, 0.25);
+}
+
+.final-cta-primary:hover span {
+  transform: translateX(5px);
+}
+
+.final-cta-secondary {
+  background: #ffffff;
+  color: #10131b;
+  border: 1px solid #d9e0eb;
+}
+
+.final-cta-secondary:hover {
+  transform: translateY(-3px);
+  background: #10131b;
+  color: #ffffff;
+}
+
+/* =========================
+   TRUST LINE
+========================= */
+
+.final-cta-trust {
+  margin-top: 32px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+
+  color: #626872;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.final-cta-trust span {
+  color: #064bc4;
+  font-weight: 800;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.final-cta-image {
+  position: relative;
+  height: 560px;
+
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.final-cta-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.final-cta-image:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================
+   IMAGE INFO CARD
+========================= */
+
+.final-cta-image-card {
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+
+  padding: 20px 22px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 18px;
+
+  box-sizing: border-box;
+}
+
+.final-cta-image-card strong {
+  color: #10131b;
+  font-size: 17px;
+}
+
+.final-cta-image-card span {
+  color: #626872;
+  font-size: 14px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .final-cta-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .final-cta-content {
+    max-width: 800px;
+  }
+
+  .final-cta-image {
+    height: 500px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .final-cta-section {
+    padding: 80px 20px;
+  }
+
+  .final-cta-container {
+    min-height: auto;
+    gap: 40px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 50px;
+    letter-spacing: -2px;
+  }
+
+  .final-cta-content p {
+    font-size: 16px;
+    margin-top: 25px;
+  }
+
+  .final-cta-buttons {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .final-cta-primary,
+  .final-cta-secondary {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .final-cta-trust {
+    font-size: 13px;
+  }
+
+  .final-cta-image {
+    height: 420px;
+    border-radius: 22px;
+  }
+
+  .final-cta-image-card {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+

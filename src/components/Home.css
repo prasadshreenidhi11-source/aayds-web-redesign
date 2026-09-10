@@ -1,0 +1,684 @@
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f3f7ff;
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+  width: 100%;
+  padding: 20px 2.5% 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO CONTENT
+   LARGE WHITE CARD
+========================================= */
+
+.hero-content {
+  width: 100%;
+  max-width: 1650px;
+
+  min-height: 650px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce4f1;
+
+  border-radius: 38px;
+
+  padding: 58px 58px 60px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  position: relative;
+
+  box-shadow:
+    0 15px 35px rgba(20, 55, 110, 0.08);
+}
+
+
+/* =========================================
+   LOCATION BADGE
+========================================= */
+
+.location-badge {
+  width: fit-content;
+
+  min-height: 38px;
+
+  padding: 8px 18px;
+
+  margin-bottom: 32px;
+
+  background: #ffffff;
+
+  border: 1px solid #d9dfe8;
+
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #064bc4;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO HEADING
+========================================= */
+
+.hero-content h1 {
+  width: 100%;
+
+  max-width: 1050px;
+
+  margin: 0 0 26px;
+
+  font-size: clamp(55px, 5.2vw, 82px);
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+  font-weight: 800;
+
+  color: #0b0d14;
+}
+
+.hero-content h1 span {
+  color: #064bc4;
+}
+
+
+/* =========================================
+   HERO DESCRIPTION
+========================================= */
+
+.hero-content p {
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: 0 0 22px;
+
+  font-size: 18px;
+
+  line-height: 1.65;
+
+  color: #626b78;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+
+  margin-top: 18px;
+}
+
+
+.primary-btn,
+.secondary-btn {
+  min-height: 64px;
+
+  padding: 0 30px;
+
+  border-radius: 40px;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    all 0.3s ease;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.primary-btn {
+  background: #064bc4;
+
+  color: #ffffff;
+
+  border: 2px solid #064bc4;
+
+  box-shadow:
+    0 10px 20px rgba(6, 75, 196, 0.25);
+}
+
+.primary-btn:hover {
+  background: #003da5;
+
+  border-color: #003da5;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 28px rgba(6, 75, 196, 0.3);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.secondary-btn {
+  background: #ffffff;
+
+  color: #064bc4;
+
+  border: 1px solid #d4deed;
+}
+
+.secondary-btn:hover {
+  background: #f4f7fc;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   BLUE STATS SECTION
+========================================= */
+
+.stats-card {
+  width: 100%;
+  max-width: 1650px;
+
+  margin-top: 20px;
+
+  background: #064bc4;
+
+  color: #ffffff;
+
+  padding: 30px 40px;
+
+  border-radius: 30px 30px 0 0;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   STATS ROW
+========================================= */
+
+.stats-row {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    1fr
+    1.4fr;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.stats-row > div {
+  text-align: center;
+}
+
+
+.stats-row strong {
+  display: block;
+
+  font-size: 29px;
+
+  font-weight: 700;
+
+  margin-bottom: 5px;
+}
+
+
+.stats-row small {
+  font-size: 14px;
+
+  opacity: 0.85;
+}
+
+
+/* =========================================
+   STATS DIVIDER
+========================================= */
+
+.stats-divider {
+  display: none;
+}
+
+
+/* =========================================
+   STATS DESCRIPTION
+========================================= */
+
+.stats-description {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 14px;
+
+  text-align: left;
+}
+
+
+.stats-description p {
+  margin: 0;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  color: #ffffff;
+}
+
+
+.heart-icon {
+  width: 44px;
+
+  height: 44px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 25px;
+}
+
+
+/* =========================================
+   MARQUEE
+========================================= */
+
+.marquee-wrapper {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #064bc4;
+
+  padding: 18px 0;
+
+  position: relative;
+
+  z-index: 3;
+
+  margin-top: 0;
+  border: none;
+}
+
+
+.marquee-track {
+  width: max-content;
+
+  display: flex;
+
+  animation: marquee 25s linear infinite;
+}
+
+
+.marquee-content {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  padding-right: 28px;
+
+  white-space: nowrap;
+}
+
+
+.marquee-content span {
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+
+.marquee-content i {
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-style: normal;
+}
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .hero-section {
+    padding: 20px 3% 0;
+  }
+
+
+  .hero-content {
+    min-height: auto;
+
+    padding: 55px 45px;
+
+    border-radius: 30px;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+  .location-badge {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .hero-content h1 {
+    max-width: 900px;
+
+    font-size: clamp(50px, 8vw, 72px);
+
+    letter-spacing: -3px;
+  }
+
+
+  .hero-content p {
+    max-width: 750px;
+
+    font-size: 17px;
+  }
+
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+
+  .stats-card {
+    margin-top: 0;
+
+    border-radius: 25px 25px 0 0;
+  }
+
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 25px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .hero-section {
+    padding: 15px 15px 0;
+  }
+
+
+  .hero-content {
+    padding: 38px 25px 40px;
+
+    border-radius: 25px;
+
+    text-align: left;
+  }
+
+
+  .location-badge {
+    margin-left: 0;
+
+    margin-right: 0;
+
+    margin-bottom: 25px;
+
+    font-size: 13px;
+  }
+
+
+  .hero-content h1 {
+    font-size: clamp(40px, 12vw, 57px);
+
+    line-height: 1;
+
+    letter-spacing: -2.5px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .hero-content p {
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+  }
+
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+
+    gap: 12px;
+
+    margin-top: 12px;
+  }
+
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+
+    min-height: 56px;
+  }
+
+
+  /* =====================================
+     MOBILE STATS
+  ===================================== */
+
+  .stats-card {
+    width: 100%;
+
+    margin-top: 0;
+
+    padding: 28px 20px;
+
+    border-radius: 22px 22px 0 0;
+  }
+
+
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px 10px;
+  }
+
+
+  .stats-row strong {
+    font-size: 22px;
+  }
+
+
+  .stats-row small {
+    font-size: 12px;
+  }
+
+
+  .stats-divider {
+    margin: 22px 0;
+  }
+
+
+  .stats-description {
+    justify-content: center;
+
+    text-align: center;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+
+  .stats-description p {
+    font-size: 14px;
+
+    max-width: 300px;
+  }
+
+
+  /* =====================================
+     MOBILE MARQUEE
+  ===================================== */
+
+  .marquee-wrapper {
+    padding: 15px 0;
+  }
+
+
+  .marquee-content {
+    gap: 22px;
+
+    padding-right: 22px;
+  }
+
+
+  .marquee-content span {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .hero-content {
+    padding-left: 20px;
+
+    padding-right: 20px;
+  }
+
+
+  .hero-content h1 {
+    font-size: 39px;
+  }
+
+
+  .stats-row strong {
+    font-size: 20px;
+  }
+
+
+  .stats-row small {
+    font-size: 11px;
+  }
+}
+/* =========================================
+   JOIN STATS + MARQUEE
+========================================= */
+
+.stats-card {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.marquee-wrapper {
+  margin-top: 0;
+  border-top: none;
+}

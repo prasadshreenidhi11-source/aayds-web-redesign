@@ -1,0 +1,367 @@
+/* =========================================
+   WHO WE SUPPORT
+========================================= */
+
+.who-we-support {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 110px auto;
+
+  padding: 0 40px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.who-support-header {
+  max-width: 850px;
+
+  margin: 0 auto 65px;
+
+  text-align: center;
+}
+
+.who-support-label {
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  color: #064bc4;
+}
+
+.who-support-header h2 {
+  margin: 0;
+
+  font-size: clamp(38px, 4.5vw, 56px);
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+
+  color: #10131b;
+}
+
+.who-support-header p {
+  max-width: 720px;
+
+  margin: 20px auto 0;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  color: #626872;
+}
+
+
+/* =========================================
+   SUPPORT CARDS
+========================================= */
+
+.support-cards {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 18px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.support-card {
+  position: relative;
+
+  min-height: 330px;
+
+  overflow: hidden;
+
+  border-radius: 25px;
+
+  background: #f5f8fd;
+
+  border: 1px solid #e2e8f2;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.support-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 40px rgba(0, 45, 120, 0.13);
+}
+
+
+/* =========================================
+   FRONT OF CARD
+========================================= */
+
+.support-card-front {
+  position: absolute;
+
+  inset: 0;
+
+  padding: 30px 24px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  transition:
+    transform 0.45s ease,
+    opacity 0.35s ease;
+}
+
+
+/* =========================================
+   FRONT SLIDES LEFT
+========================================= */
+
+.support-card:hover .support-card-front {
+  transform: translateX(-100%);
+
+  opacity: 0;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.support-number {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #064bc4;
+}
+
+
+/* =========================================
+   FRONT HEADING
+========================================= */
+
+.support-card-front h3 {
+  margin: 0;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 1.45;
+
+  color: #10131b;
+}
+
+
+/* =========================================
+   HOVER CONTENT
+========================================= */
+
+.support-card-hover {
+  position: absolute;
+
+  inset: 0;
+
+  padding: 30px 24px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #064bc4;
+
+  color: white;
+
+  transform: translateX(100%);
+
+  transition: transform 0.45s ease;
+}
+
+
+/* =========================================
+   HOVER CONTENT SLIDES IN
+========================================= */
+
+.support-card:hover .support-card-hover {
+  transform: translateX(0);
+}
+
+
+/* =========================================
+   HOVER NUMBER
+========================================= */
+
+.support-card-hover .support-number {
+  margin-bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 14px;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   HOVER HEADING
+========================================= */
+
+.support-card-hover h3 {
+  margin: 0 0 15px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  color: white;
+}
+
+
+/* =========================================
+   HOVER DESCRIPTION
+========================================= */
+
+.support-card-hover p {
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.65;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.support-cta {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 40px;
+}
+
+.support-cta a {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 15px 30px;
+
+  border-radius: 40px;
+
+  background: #064bc4;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.support-cta a:hover {
+  background: #043c9d;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .support-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .who-we-support {
+    padding: 0 20px;
+
+    margin: 70px auto;
+  }
+
+  .who-support-header h2 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .who-support-header p {
+    font-size: 16px;
+  }
+
+  .support-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .support-card {
+    min-height: 300px;
+  }
+
+}

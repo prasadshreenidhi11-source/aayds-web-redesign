@@ -1,0 +1,251 @@
+
+.about-section {
+  width: 100%;
+  padding: 120px 5%;
+  background: #ffffff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* =========================
+   CENTER HEADING
+========================= */
+
+.about-header {
+  max-width: 950px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.about-label {
+  display: block;
+  margin-bottom: 18px;
+  color: #064bc4;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-header h2 {
+  margin: 0;
+  color: #10131b;
+  font-size: clamp(38px, 5vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  font-weight: 700;
+}
+
+/* =========================
+   ACCORDION
+========================= */
+
+.about-accordion {
+  width: 100%;
+  max-width: 1400px;
+  height: 560px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 10px;
+}
+
+/* =========================
+   INDIVIDUAL CARDS
+========================= */
+
+.about-card {
+  position: relative;
+
+  flex: 1;
+  min-width: 0;
+
+  height: 100%;
+
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 22px;
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    flex 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s ease;
+}
+
+/* DARK OVERLAY */
+
+.about-card-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.88),
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.05)
+    );
+
+  transition: background 0.5s ease;
+}
+
+/* =========================
+   HOVER EXPANSION
+========================= */
+
+.about-card:hover {
+  flex: 4;
+}
+
+.about-card:hover .about-card-overlay {
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.92),
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.08)
+    );
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.about-card-content {
+  position: absolute;
+  inset: 0;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  color: #ffffff;
+  z-index: 2;
+}
+
+.about-card-number {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  opacity: 0.8;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.about-card-info {
+  max-width: 520px;
+
+  opacity: 0;
+  transform: translateY(25px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s ease;
+
+  transition-delay: 0s;
+}
+
+.about-card:hover .about-card-info {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: 0.2s;
+}
+
+.about-card-info h3 {
+  margin: 0 0 15px;
+
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-card-info p {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .about-section {
+    padding: 90px 20px;
+  }
+
+  .about-header {
+    margin-bottom: 45px;
+  }
+
+  .about-header h2 {
+    font-size: 42px;
+  }
+
+  .about-accordion {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .about-card {
+    flex: none;
+    width: 100%;
+    height: 180px;
+  }
+
+  .about-card:hover {
+    flex: none;
+    height: 360px;
+  }
+
+  .about-card-info {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 75px 15px;
+  }
+
+  .about-header h2 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .about-card {
+    height: 170px;
+  }
+
+  .about-card:hover {
+    height: 350px;
+  }
+
+  .about-card-content {
+    padding: 22px;
+  }
+
+  .about-card-info h3 {
+    font-size: 21px;
+  }
+
+  .about-card-info p {
+    font-size: 15px;
+  }
+}
+

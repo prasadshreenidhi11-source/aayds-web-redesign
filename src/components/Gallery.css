@@ -1,0 +1,319 @@
+/* =========================================
+   GALLERY SECTION
+========================================= */
+
+.gallery-section {
+  width: 100%;
+  padding: 110px 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.gallery-header {
+  max-width: 850px;
+  margin: 0 auto 65px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.gallery-label {
+  display: block;
+
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #064bc4;
+}
+
+.gallery-header h2 {
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  color: #10131b;
+}
+
+.gallery-header p {
+  max-width: 700px;
+
+  margin: 22px auto 0;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #626872;
+}
+
+
+/* =========================================
+   MARQUEE
+========================================= */
+
+.gallery-marquee {
+  width: 100%;
+
+  overflow: hidden;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   TRACK
+========================================= */
+
+.gallery-track {
+  display: flex;
+
+  width: max-content;
+
+  gap: 20px;
+
+  animation-duration: 38s;
+
+  animation-timing-function: linear;
+
+  animation-iteration-count: infinite;
+}
+
+
+/* =========================================
+   LEFT ROW
+========================================= */
+
+.gallery-marquee-left .gallery-track {
+  animation-name: galleryMoveLeft;
+}
+
+
+/* =========================================
+   RIGHT ROW
+========================================= */
+
+.gallery-marquee-right .gallery-track {
+  animation-name: galleryMoveRight;
+}
+
+
+/* =========================================
+   PHOTO CARD
+========================================= */
+
+.gallery-card {
+  position: relative;
+
+  width: 300px;
+
+  height: 220px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: #eeeeee;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+
+/* =========================================
+   IMAGE ZOOM
+========================================= */
+
+.gallery-card:hover img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================
+   CAPTION
+========================================= */
+
+.gallery-caption {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 55px 20px 20px;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.88),
+    rgba(0, 0, 0, 0)
+  );
+
+  color: white;
+
+  font-size: 15px;
+
+  line-height: 1.45;
+
+  font-weight: 500;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+/* =========================================
+   SHOW CAPTION ON HOVER
+========================================= */
+
+.gallery-card:hover .gallery-caption {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   PAUSE MARQUEE WHEN HOVERING
+========================================= */
+
+.gallery-marquee:has(.gallery-card:hover) .gallery-track {
+  animation-play-state: paused;
+}
+
+
+/* =========================================
+   LEFT ANIMATION
+========================================= */
+
+@keyframes galleryMoveLeft {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =========================================
+   RIGHT ANIMATION
+========================================= */
+
+@keyframes galleryMoveRight {
+
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .gallery-card {
+    width: 260px;
+    height: 200px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .gallery-section {
+    padding: 80px 0;
+  }
+
+  .gallery-header {
+    padding: 0 20px;
+  }
+
+  .gallery-header h2 {
+    font-size: 42px;
+  }
+
+  .gallery-header p {
+    font-size: 16px;
+  }
+
+  .gallery-card {
+    width: 240px;
+    height: 190px;
+  }
+
+}
+
+
+
+
+```text
+public/
+└── gallery/
+    ├── team-community-evening.jpg
+    ├── community-celebration.jpg
+    ├── team-participant-banner.jpg
+    ├── support-vehicle.jpg
+    ├── participant-carport.jpg
+    ├── participant-park.jpg
+    ├── birthday-tiara.jpg
+    ├── redcliffe-waterfront.jpg
+    ├── staff-recognition.jpg
+    ├── balloon-community-event.jpg
+    ├── shaded-park-walk.jpg
+    ├── two-recognition-certificates.jpg
+    ├── personal-grooming.jpg
+    ├── gardening-vehicle.jpg
+    └── years-of-service.jpg
+```
+
